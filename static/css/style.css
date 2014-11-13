@@ -49,6 +49,8 @@ html,body {
 .empty-item {
     width: 300px;
     margin-right: 50px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .empty-item:last-of-type {
