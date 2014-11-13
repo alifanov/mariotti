@@ -5,8 +5,12 @@ html,body {
 
 .menu {
     background: white;
-    border-bottom: 20px solid #237b3c;
-    height: 210px;
+    border-bottom: 7px solid #237b3c;
+    height: 80px;
+}
+
+.menu img {
+    height: 30px;
 }
 
 .container {
