@@ -38,3 +38,7 @@ html,body {
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+
+.footer .contacts {
+    font-size: 12px;
+}
