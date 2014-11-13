@@ -22,6 +22,7 @@ html,body {
 .body-empty {
     height: 500px;
     background: url('/static/img/bg.jpg') repeat-x;
+    background-size: contain;
 }
 
 .footer > div {
