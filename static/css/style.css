@@ -37,7 +37,7 @@ html,body {
 .footer .contact-title {
     text-transform: uppercase;
     margin-bottom: 30px;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .footer .contacts {
