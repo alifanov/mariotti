@@ -1,0 +1,10 @@
+.menu {
+    background: white;
+    border-bottom: 20px solid #237b3c;
+    height: 210px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
