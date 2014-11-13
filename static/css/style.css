@@ -26,7 +26,7 @@ html,body {
 }
 
 .footer > div {
-    height: 524px;
+    height: 300px;
     border-bottom: 7px solid #237b3c;
     margin-bottom: 1px;
     background: url('/static/img/footer-bg.jpg') repeat-x;
@@ -47,7 +47,7 @@ html,body {
 }
 
 .empty-item {
-    margin-top: 50px;
+    margin-top: 110px;
     width: 280px;
     margin-right: 50px;
     display: inline-block;
