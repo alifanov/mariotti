@@ -45,3 +45,12 @@ html,body {
     font-size: 12px;
     margin-bottom: 5px;
 }
+
+.empty-item {
+    width: 300px;
+    margin-right: 50px;
+}
+
+.empty-item:last-of-type {
+    margin-right: 0;
+}
