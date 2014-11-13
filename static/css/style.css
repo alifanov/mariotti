@@ -30,4 +30,6 @@ html,body {
     margin-bottom: 1px;
     background: url('/static/img/footer-bg.jpg') repeat-x;
     background-size: contain;
+    color: white;
+    font-family: Arial;
 }
