@@ -53,6 +53,10 @@ html,body {
     vertical-align: top;
 }
 
+.empty-item img {
+    height: 250px;
+}
+
 .empty-item:last-of-type {
     margin-right: 0;
 }
