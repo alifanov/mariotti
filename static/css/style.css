@@ -23,3 +23,9 @@ html,body {
     height: 500px;
     background: url('/static/img/bg.jpg') repeat-x;
 }
+
+.footer > div {
+    height: 100px;
+    border-bottom: 7px solid #237b3c;
+    margin-bottom: 1px;
+}
