@@ -85,13 +85,15 @@ ul.footer-menu {
 }
 
 .services-item {
-    width: 300px;
+    width: 195px;
     display: inline-block;
     vertical-align: top;
     color: white;
 }
 
-
+.service-title {
+    text-transform: uppercase;
+}
 
 .menu {
     background: white;
