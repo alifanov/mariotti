@@ -10,6 +10,6 @@ $(function(){
 
     $(".text-body").mCustomScrollbar({
         setHeight: 205,
-        inertia: 0
+        scrollInertia: 0
     });
 });
