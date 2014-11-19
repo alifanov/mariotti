@@ -3,6 +3,26 @@ html,body {
     margin: 0;
 }
 
+.header {
+    background: white;
+    position: relative;
+    border-bottom: 7px solid #237b3c;
+    height: 80px;
+}
+
+.header-menu a div {
+    display: inline-block;
+    color: #7d7c7c;
+    padding: 5px;
+}
+
+.header-menu a:hover div {
+    background: #7d7c7c;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
 .menu {
     background: white;
     border-bottom: 7px solid #237b3c;
