@@ -137,10 +137,17 @@ ul.footer-menu {
 
 .body-wrapper {
     background: #f6f6f6;
+    padding-top: 40px;
 }
 
 .gallery {
     width: 315px;
+    float: left;
+}
+
+.text-wrapper {
+    margin-left: 350px;
+    width: 600px;
 }
 
 .gallery img {
