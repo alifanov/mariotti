@@ -7,4 +7,8 @@ $(function(){
         loop: true,
         dots: true
     });
+
+    $(".text-body").mCustomScrollbar({
+        setHeight: 205
+    });
 });
