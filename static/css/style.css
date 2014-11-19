@@ -6,7 +6,6 @@ html,body {
 
 .header {
     background: white;
-    position: relative;
     border-bottom: 7px solid #237b3c;
     height: 80px;
 }
@@ -49,6 +48,7 @@ ul.header-menu {
 .container {
     width: 960px;
     margin: 0 auto;
+    position: relative;
 }
 
 .body-empty {
