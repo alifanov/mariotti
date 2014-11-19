@@ -92,13 +92,13 @@ ul.footer-menu {
     margin-right: 15px;
 }
 
-.service-item img {
+.services-item img {
     margin: 0 auto;
     margin-bottom: 20px;
     display: block;
 }
 
-.service-item a {
+.services-item a {
     font-size: 12px;
     color: #237b3c;
     text-decoration: none;
