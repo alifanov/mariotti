@@ -80,6 +80,17 @@ ul.footer-menu {
     text-transform: uppercase;
 }
 
+.services-wrapper {
+    background: black;
+}
+
+.services-item {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+}
+
 
 
 .menu {
