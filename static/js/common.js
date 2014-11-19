@@ -2,5 +2,9 @@
  * Created by vampire on 13.11.14.
  */
 $(function(){
-    $(".gallery").owlCarousel();
+    $(".gallery").owlCarousel({
+        items:1,
+        loop: true,
+        dots: true
+    });
 });
