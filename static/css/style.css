@@ -91,6 +91,10 @@ ul.footer-menu {
     color: white;
 }
 
+#service-bigger {
+    width: 236px;
+}
+
 .service-title {
     text-transform: uppercase;
 }
