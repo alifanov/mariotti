@@ -89,6 +89,11 @@ ul.footer-menu {
     display: inline-block;
     vertical-align: top;
     color: white;
+    margin-right: 15px;
+}
+
+.services-item:last-of-type {
+    margin-right: 0;
 }
 
 #service-bigger {
