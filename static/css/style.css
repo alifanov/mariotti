@@ -171,6 +171,18 @@ ul.footer-menu {
     width: auto;
 }
 
+.mCSB_scrollTools {
+    width: 4px;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    background: #b0b0af;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: #237b3c;
+}
+
 
 .menu {
     background: white;
