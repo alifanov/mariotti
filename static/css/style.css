@@ -11,6 +11,16 @@ html,body {
     height: 80px;
 }
 
+ul.header-menu {
+    padding: 0;
+    margin: 0;
+}
+
+.header-menu li {
+    float: left;
+    list-style-type: none;
+}
+
 .header-menu li a {
     display: inline-block;
     color: #7d7c7c;
