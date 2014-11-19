@@ -92,6 +92,10 @@ ul.footer-menu {
     margin-right: 15px;
 }
 
+.service-item img {
+    margin-bottom: 20px;
+}
+
 .services-item:last-of-type {
     margin-right: 0;
 }
@@ -102,6 +106,8 @@ ul.footer-menu {
 
 .service-title {
     text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #6f7071;
 }
 
 .service-desc {
