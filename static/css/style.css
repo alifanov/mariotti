@@ -166,6 +166,10 @@ ul.footer-menu {
     border: 10px solid white;
 }
 
+.owl-carousel .owl-item img {
+    width: auto;
+}
+
 
 .menu {
     background: white;
