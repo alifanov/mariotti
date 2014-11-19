@@ -84,6 +84,10 @@ ul.footer-menu {
     background: black;
 }
 
+.services {
+    padding-top: 25px;
+}
+
 .services-item {
     width: 160px;
     display: inline-block;
