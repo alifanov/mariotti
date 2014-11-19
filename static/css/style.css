@@ -141,13 +141,24 @@ ul.footer-menu {
 }
 
 .gallery {
-    width: 315px;
+    width: 325px;
     float: left;
 }
 
 .text-wrapper {
     margin-left: 350px;
     width: 600px;
+}
+
+.text-title {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #237b3c;
+}
+
+.text-body {
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 .gallery img {
