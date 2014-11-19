@@ -9,7 +9,7 @@ $(function(){
     });
 
     $(".text-body").mCustomScrollbar({
-        setHeight: 205,
+        setHeight: 200,
         scrollInertia: 0
     });
 });
