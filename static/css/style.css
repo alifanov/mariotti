@@ -139,6 +139,10 @@ ul.footer-menu {
     background: #f6f6f6;
 }
 
+.gallery img {
+    border: 10px solid white;
+}
+
 
 
 .menu {
