@@ -43,6 +43,8 @@ ul.header-menu {
 
 .footer {
     background: black;
+    padding-top: 13px;
+    border-top: 10px solid #237b3c;
 }
 
 
