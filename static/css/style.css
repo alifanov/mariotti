@@ -41,6 +41,13 @@ ul.header-menu {
     margin-top: 20px;
 }
 
+.footer {
+    background: black;
+}
+
+
+
+
 .menu {
     background: white;
     border-bottom: 7px solid #237b3c;
@@ -64,7 +71,7 @@ ul.header-menu {
     background-size: contain;
 }
 
-.footer > div {
+.sfooter > div {
     height: 300px;
     border-bottom: 7px solid #237b3c;
     margin-bottom: 1px;
@@ -74,13 +81,13 @@ ul.header-menu {
     font-family: Arial;
 }
 
-.footer .contact-title {
+.sfooter .contact-title {
     text-transform: uppercase;
     margin-bottom: 30px;
     padding-top: 40px;
 }
 
-.footer .contacts {
+.sfooter .contacts {
     font-size: 12px;
     margin-bottom: 5px;
 }
