@@ -85,7 +85,7 @@ ul.footer-menu {
 }
 
 .services-item {
-    width: 195px;
+    width: 160px;
     display: inline-block;
     vertical-align: top;
     color: white;
@@ -97,6 +97,10 @@ ul.footer-menu {
 
 .service-title {
     text-transform: uppercase;
+}
+
+.service-body {
+    font-size: 12px;
 }
 
 .menu {
