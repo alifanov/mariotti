@@ -333,6 +333,8 @@ ul.footer-menu {
 
 .contact-welcome .welcome {
     text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #237b3c;
 }
 
 .contact-form-wrapper {
