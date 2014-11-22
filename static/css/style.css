@@ -326,9 +326,10 @@ ul.footer-menu {
 }
 
 .contact-welcome {
-    height: 286px;
+    height: 236px;
     background: url('/static/img/contacts-bg.jpg') repeat-x;
     color: white;
+    padding-top: 50px;
 }
 
 .contact-welcome .welcome {
@@ -336,7 +337,6 @@ ul.footer-menu {
     padding-bottom: 10px;
     border-bottom: 1px solid #237b3c;
     margin-bottom: 10px;
-    margin-top: 50px;
 }
 
 .contact-form-wrapper {
