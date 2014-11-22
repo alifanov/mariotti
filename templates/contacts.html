@@ -16,7 +16,8 @@
             <div class="form-title">Вы можете написать нам:</div>
             <form method="POST">{% csrf_token %}
                 <div class="form-block">
-                    <input type="text" />
+                    <input type="text" class="error" />
+                    <div class="error-alert">Проверьте пожалуйста, правильно ли вы заполнили форму</div>
                 </div>
                 <div class="form-block">
                     <input type="text" />

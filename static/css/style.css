@@ -362,6 +362,10 @@ ul.footer-menu {
     padding-left: 5px;
 }
 
+.contact-form-wrapper input.error {
+    border: 1px solid red;
+}
+
 .contact-form-wrapper textarea {
     border: 0;
     padding-left: 5px;
@@ -384,7 +388,7 @@ ul.footer-menu {
     background: #237b3c;
     padding: 5px;
     border: 0;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .contact-form-wrapper img {
