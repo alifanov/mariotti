@@ -342,6 +342,8 @@ ul.footer-menu {
 
 .contact-form-wrapper {
     background: #d6d6d6;
+    min-height: 300px;
+    padding-top: 30px;
 }
 
 .contact-form-wrapper img {
