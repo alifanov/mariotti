@@ -261,7 +261,7 @@ ul.footer-menu {
     padding-right: 5px;
 }
 
-.breadcrumbs li li a {
+.breadcrumbs ul li a {
     text-transform: uppercase;
     text-decoration: none;
 }
