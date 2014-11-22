@@ -425,6 +425,7 @@ ul.footer-menu {
     background: white;
     width: 560px;
     height: 170px;
+    display: none;
 }
 
 .modal .thx-text{
