@@ -359,16 +359,30 @@ ul.footer-menu {
     line-height: 25px;
     text-transform: uppercase;
     color: #237b3c;
+    padding-left: 5px;
 }
 
 .contact-form-wrapper textarea {
     border: 0;
+    padding-left: 5px;
     box-shadow: none;
     height: 125px;
     margin-top: 8px;
     width: 487px;
     text-transform: uppercase;
     color: #237b3c;
+}
+
+.contact-form-wrapper .form-block {
+    width: 493px;
+}
+
+.contact-form-wrapper button {
+    text-transform: uppercase;
+    color: white;
+    border-radius: 3px;
+    background: #237b3c;
+    padding: 5px;
 }
 
 .contact-form-wrapper img {
