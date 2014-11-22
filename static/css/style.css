@@ -310,4 +310,5 @@ ul.footer-menu {
 
 .home-space {
     height: 230px;
+    background: url('/static/img/home-img.jpg') repeat-x;
 }
