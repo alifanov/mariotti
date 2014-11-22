@@ -15,7 +15,8 @@ $(function(){
 
     $(".contact-form-wrapper button").click(function(){
         $.fancybox("#thx-msg", {
-            padding: 0
+            padding: 0,
+            closeBtn: false
         });
         return false;
     });
