@@ -435,5 +435,7 @@ ul.footer-menu {
 }
 
 .modal img {
-
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
