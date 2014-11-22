@@ -425,7 +425,6 @@ ul.footer-menu {
     background: white;
     width: 560px;
     height: 170px;
-    background-image: url('/static/img/logo.png');
 }
 
 .modal .thx-text{
@@ -433,4 +432,8 @@ ul.footer-menu {
     text-transform: uppercase;
     text-align: center;
     padding-top: 68px;
+}
+
+.modal img {
+
 }
