@@ -426,3 +426,9 @@ ul.footer-menu {
     width: 560px;
     height: 170px;
 }
+
+.modal .thx-text{
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
