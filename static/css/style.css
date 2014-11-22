@@ -383,6 +383,7 @@ ul.footer-menu {
     border-radius: 3px;
     background: #237b3c;
     padding: 5px;
+    border: 0;
 }
 
 .contact-form-wrapper img {
