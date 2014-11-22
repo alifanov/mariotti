@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^news-all/$', TemplateView.as_view(template_name='news-list.html'), name='news-all'),
     url(r'^portfolio-all/$', TemplateView.as_view(template_name='portfolio-list.html'), name='portfolio-all'),
     url(r'^news-item/$', TemplateView.as_view(template_name='news-item.html'), name='news-item'),
+    url(r'^portfolio-item/$', TemplateView.as_view(template_name='portfolio-item.html'), name='portfolio-item'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
