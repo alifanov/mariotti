@@ -250,6 +250,10 @@ ul.footer-menu {
     margin-right: 0;
 }
 
+.breadcrumbs {
+    height: 30px;
+}
+
 .breadcrumbs ul {
     margin: 0;
     padding: 0;
