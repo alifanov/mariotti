@@ -353,6 +353,8 @@ ul.footer-menu {
 .contact-form-wrapper input[type="text"] {
     width: 250px;
     margin-top: 8px;
+    border: 0;
+    box-shadow: none;
 }
 
 .contact-form-wrapper img {
