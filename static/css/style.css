@@ -355,6 +355,8 @@ ul.footer-menu {
     margin-top: 8px;
     border: 0;
     box-shadow: none;
+    height: 25px;
+    line-height: 25px;
 }
 
 .contact-form-wrapper img {
