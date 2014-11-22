@@ -281,3 +281,16 @@ ul.footer-menu {
     margin-bottom: 40px;
     margin-right: 1px;
 }
+
+.news-title {
+    text-transform: uppercase;
+}
+
+.news-date {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.news-desc {
+    font-size: 12px;
+}
