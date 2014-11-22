@@ -362,6 +362,21 @@ ul.footer-menu {
     padding-left: 5px;
 }
 
+.contact-form-wrapper input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #237b3c;
+}
+.contact-form-wrapper input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #237b3c;
+   opacity:  1;
+}
+.contact-form-wrapper input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #237b3c;
+   opacity:  1;
+}
+.contact-form-wrapper input:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #237b3c;
+}
+
 .contact-form-wrapper input.error {
     border: 1px solid red;
 }
