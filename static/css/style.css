@@ -273,3 +273,11 @@ ul.footer-menu {
     text-decoration: none;
     color: #237b3c;
 }
+
+.news-item {
+    width: 180px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 40px;
+    margin-right: 1px;
+}
