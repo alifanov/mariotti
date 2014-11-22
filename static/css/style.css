@@ -326,10 +326,20 @@ ul.footer-menu {
 }
 
 .contact-welcome {
-    height: 268px;
+    height: 286px;
     background: url('/static/img/contacts-bg.jpg') repeat-x;
+    color: white;
+}
+
+.contact-welcome .welcome {
+    text-transform: uppercase;
 }
 
 .contact-form-wrapper {
     background: #d6d6d6;
+}
+
+.contact-form-wrapper img {
+    float: right;
+    border: 10px solid white;
 }
