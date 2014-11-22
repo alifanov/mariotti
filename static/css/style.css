@@ -329,3 +329,7 @@ ul.footer-menu {
     height: 268px;
     background: url('/static/img/contacts-bg.jpg') repeat-x;
 }
+
+.contact-form-wrapper {
+    background: #d6d6d6;
+}

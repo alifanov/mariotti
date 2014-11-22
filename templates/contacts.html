@@ -10,4 +10,24 @@
             </div>
         </div>
     </div>
+    <div class="contact-form-wrapper">
+        <div class="container">
+            <img src="{{ STATIC_URL }}img/contacts-img.jpg" />
+            <div class="form-title">Вы можете написать нам:</div>
+            <form method="POST">{% csrf_token %}
+                <div class="form-block">
+                    <input type="text" />
+                </div>
+                <div class="form-block">
+                    <input type="text" />
+                </div>
+                <div class="form-block">
+                    <textarea></textarea>
+                </div>
+                <div class="form-block">
+                    <button class="">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}
