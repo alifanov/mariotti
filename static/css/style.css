@@ -252,6 +252,7 @@ ul.footer-menu {
 
 .breadcrumbs {
     height: 30px;
+    padding-top: 15px;
 }
 
 .breadcrumbs ul {
