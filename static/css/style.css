@@ -350,6 +350,11 @@ ul.footer-menu {
     text-transform: uppercase;
 }
 
+.contact-form-wrapper input[type="text"] {
+    width: 250px;
+    margin-top: 8px;
+}
+
 .contact-form-wrapper img {
     float: right;
     border: 10px solid white;
