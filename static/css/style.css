@@ -259,9 +259,11 @@ ul.footer-menu {
     list-style: none;
     float: left;
     padding-right: 5px;
+    color: #237b3c;
 }
 
 .breadcrumbs ul li a {
     text-transform: uppercase;
     text-decoration: none;
+    color: #237b3c;
 }
