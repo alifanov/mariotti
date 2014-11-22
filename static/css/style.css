@@ -346,6 +346,10 @@ ul.footer-menu {
     padding-top: 30px;
 }
 
+.contact-form-wrapper .form-title {
+    text-transform: uppercase;
+}
+
 .contact-form-wrapper img {
     float: right;
     border: 10px solid white;
