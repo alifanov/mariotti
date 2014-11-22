@@ -324,3 +324,8 @@ ul.footer-menu {
     text-decoration: none;
     color: #000;
 }
+
+.contact-welcome {
+    height: 268px;
+    background: url('/static/img/contacts-bg.jpg') repeat-x;
+}
