@@ -13,7 +13,7 @@ $(function(){
         scrollInertia: 0
     });
 
-    $(".contact-form-wrapper").click(function(){
+    $(".contact-form-wrapper button").click(function(){
         $("#thx-msg").fancybox('open');
         return false;
     });
