@@ -12,4 +12,9 @@ $(function(){
         setHeight: 200,
         scrollInertia: 0
     });
+
+    $(".contact-form-wrapper").click(function(){
+        $("#thx-msg").fancybox('open');
+        return false;
+    });
 });

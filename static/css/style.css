@@ -420,3 +420,9 @@ ul.footer-menu {
     float: right;
     border: 10px solid white;
 }
+
+.modal {
+    background: white;
+    width: 560px;
+    height: 170px;
+}
