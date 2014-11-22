@@ -282,13 +282,19 @@ ul.footer-menu {
     margin-right: 1px;
 }
 
+.news-item img {
+    border: 10px solid white;
+}
+
 .news-title {
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .news-date {
     text-transform: uppercase;
     font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .news-desc {
