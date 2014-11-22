@@ -312,3 +312,12 @@ ul.footer-menu {
     height: 227px;
     background: url('/static/img/home-img.jpg') repeat-x;
 }
+
+.home-news-bottom {
+    padding-top: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    border-top: 1px solid #000000;
+    padding-bottom: 10px;
+}
