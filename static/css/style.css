@@ -123,6 +123,10 @@ ul.footer-menu {
     margin-bottom: 17px;
 }
 
+.service-title.active {
+    color: #31af55;
+}
+
 #service-bigger .service-title {
     border: 0;
     margin-bottom: 3px;
@@ -244,4 +248,20 @@ ul.footer-menu {
 
 .empty-item:last-of-type {
     margin-right: 0;
+}
+
+.breadcrumbs ul {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs ul li {
+    list-style: none;
+    float: left;
+    padding-right: 5px;
+}
+
+.breadcrumbs li li a {
+    text-transform: uppercase;
+    text-decoration: none;
 }
