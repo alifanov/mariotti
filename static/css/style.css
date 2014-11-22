@@ -357,6 +357,15 @@ ul.footer-menu {
     box-shadow: none;
     height: 25px;
     line-height: 25px;
+    text-transform: uppercase;
+    color: #237b3c;
+}
+
+.contact-form-wrapper textarea {
+    margin-top: 8px;
+    width: 487px;
+    text-transform: uppercase;
+    color: #237b3c;
 }
 
 .contact-form-wrapper img {
