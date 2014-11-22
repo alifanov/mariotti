@@ -14,7 +14,7 @@ $(function(){
     });
 
     $(".contact-form-wrapper button").click(function(){
-        $("#thx-msg").fancybox('open');
+        $.fancybox("#thx-msg");
         return false;
     });
 });
