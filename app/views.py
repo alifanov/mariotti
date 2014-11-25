@@ -6,7 +6,8 @@ from django.views.generic import ListView, DetailView, TemplateView
 class GeneralMixin(object):
     def get_context_data(self, **kwargs):
         ctx = super(GeneralMixin, self).get_context_data(**kwargs)
-        ctx['services'] = NewsItem.objects.order_by('-date')
+        ctx['news'] = NewsItem.objects.order_by('-date')
+        ctx['services'] = ServiceItem.objects.order_by('order')
         return ctx
 
 class NewsList(GeneralMixin, ListView):
