@@ -28,3 +28,4 @@ class PortfolioItemAdmin(admin.ModelAdmin):
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(ServiceItem, ServiceItemAdmin)
 admin.site.register(NewsItem, NewsItemAdmin)
+admin.site.register(PageItem)
