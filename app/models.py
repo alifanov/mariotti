@@ -6,7 +6,7 @@ from django.db import models
 
 class NewsItem(models.Model):
     title = models.CharField(max_length=255, verbose_name=u'Title')
-    date = models.DateField(auto_now_add=True, verbose_name=u'Date', editable=True)
+    date = models.DateField(verbose_name=u'Date')
     short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
     text = models.TextField(verbose_name=u'Text')
 
