@@ -22,7 +22,7 @@
                    <a href="{% url 'home-1' %}">Главная</a>
                </li>
                <li>
-                   <a href="#">О компании</a>
+                   <a href="{% url 'about' %}">О компании</a>
                </li>
                <li>
                    <a href="#">Портфолио</a>
@@ -45,13 +45,13 @@
     <div class="container">
        <ul class="footer-menu">
            <li>
-               <a href="#">О компании</a>
+               <a href="{% url 'about' %}">О компании</a>
            </li>
            <li>
                <a href="#">Портфолио</a>
            </li>
            <li>
-               <a href="#">Услуги</a>
+               <a href="{% url 'service' pk=1 %}">Услуги</a>
            </li>
            <li>
                <a href="#">Спецпредложения</a>

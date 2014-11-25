@@ -13,6 +13,9 @@ class GeneralMixin(object):
 class HomeView(GeneralMixin, TemplateView):
     template_name = 'home.html'
 
+class AboutView(GeneralMixin, TemplateView):
+    template_name = 'about.html'
+
 class NewsList(GeneralMixin, ListView):
     model = NewsItem
     template_name = 'news-list.html'
