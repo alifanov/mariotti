@@ -10,6 +10,9 @@ class GeneralMixin(object):
         ctx['services'] = ServiceItem.objects.order_by('order')
         return ctx
 
+class HomeView(GeneralMixin, TemplateView):
+    template_name = 'home.html'
+
 class NewsList(GeneralMixin, ListView):
     model = NewsItem
     template_name = 'news-list.html'

@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', TemplateView.as_view(template_name='empty.html'), name='home'),
     url(r'^contacts/$', TemplateView.as_view(template_name='contacts.html'), name='contacts'),
-    url(r'^home/$', TemplateView.as_view(template_name='home.html'), name='home-1'),
+    url(r'^home/$', HomeView.as_view(), name='home-1'),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'^service/(?P<pk>\d+)/$', ServiceDetail.as_view(), name='service'),
     url(r'^news/$', NewsList.as_view(), name='news'),
