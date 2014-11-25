@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^service/$', TemplateView.as_view(template_name='service.html'), name='service'),
     url(r'^news/$', NewsList.as_view(), name='news'),
     url(r'^portfolio-all/$', TemplateView.as_view(template_name='portfolio-list.html'), name='portfolio-all'),
-    url(r'^news/(?P<slug>[-\w]+)/$', NewsDetail.as_view(), name='news-item'),
+    url(r'^news/(?P<pk>\d+)/$', NewsDetail.as_view(), name='news-item'),
     url(r'^portfolio-item/$', TemplateView.as_view(template_name='portfolio-item.html'), name='portfolio-item'),
     # url(r'^blog/', include('blog.urls')),
 
