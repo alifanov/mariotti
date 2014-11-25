@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load thumbnail %}
+
 {% block content %}
     <div class="home-space">
 
@@ -19,7 +21,9 @@
                 <div class="news-date">
                     {{ n.date|date:"d.m.Y" }}
                 </div>
-                <img src="{{ n.images.all.0.image.url }}" />
+                {% thumbnail n.images.all.0 '185x120' crop='center' as im %}
+                    <img src="{{ im.url }}" />
+                {% endthumbnail %}
                 <a href="{% url 'news-item' pk=n.pk %}">Читать новость</a>
             </div>
             {% endfor %}
