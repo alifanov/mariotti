@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load widget_tweaks %}
+
 {% block content %}
     <div class="contact-welcome">
         <div class="container">
@@ -16,14 +18,16 @@
             <div class="form-title">Вы можете написать нам:</div>
             <form method="POST">{% csrf_token %}
                 <div class="form-block">
-                    <input type="text" class="error" placeholder="ИМЯ" />
+                    {{ form.name|attr:"placeholder:ИМЯ" }}
+{#                    <input type="text" class="error" placeholder="ИМЯ" />#}
                     <div class="error-alert">Проверьте пожалуйста, правильно ли вы заполнили форму</div>
                 </div>
                 <div class="form-block">
-                    <input type="text" placeholder="E-MAIL" />
+                    {{ form.email|attr:"placeholder:E-MAIL" }}
+{#                    <input type="text" placeholder="E-MAIL" />#}
                 </div>
                 <div class="form-block">
-                    <textarea></textarea>
+                    {{ form.text }}
                 </div>
                 <div class="form-block" style="text-align: right;">
                     <button class="">Отправить</button>

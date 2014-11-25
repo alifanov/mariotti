@@ -3,6 +3,18 @@ from django.db import models
 
 # Create your models here.
 
+class ContactFormApply(models.Model):
+    created = models.DateTimeField(auto_now_add=True, verbose_name=u'Created')
+    name = models.CharField(max_length=255, verbose_name=u'Name')
+    email = models.CharField(max_length=255, verbose_name=u'E-mail')
+    text = models.TextField(blank=True, null=True, verbose_name=u'Text')
+
+    def __unicode__(self):
+        return u'{}: {}'.format(self.created.strftime('%H:%I %d.%m.%Y'), self.name)
+
+    class Meta:
+        verbose_name = u'Contact apply'
+        verbose_name_plural = u'Contact applies'
 
 class PageItem(models.Model):
     title = models.CharField(max_length=255, verbose_name=u'Title')

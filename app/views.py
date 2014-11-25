@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from app.models import *
+from app.forms import *
 from django.views.generic import ListView, DetailView, TemplateView
 # Create your views here.
 
@@ -23,6 +24,11 @@ class AboutView(GeneralMixin, TemplateView):
 
 class ContactsView(GeneralMixin, TemplateView):
     template_name = 'contacts.html'
+
+    def get_context_data(self, **kwargs):
+        ctx = super(ContactsView, self).get_context_data(**kwargs)
+        ctx['form'] = ContactPageForm()
+        return ctx
 
 class NewsList(GeneralMixin, ListView):
     model = NewsItem
