@@ -31,10 +31,9 @@
     <div class="body-wrapper">
         <div class="container">
             <div class="gallery">
-                <img src="{{ STATIC_URL }}img/about-img.jpg" width="292" />
-                <img src="{{ STATIC_URL }}img/about-img.jpg" width="292" />
-                <img src="{{ STATIC_URL }}img/about-img.jpg" width="292" />
-                <img src="{{ STATIC_URL }}img/about-img.jpg" width="292" />
+                {% for img in service.image.all %}
+                    <img src="{{ img.image.url }}" width="292" />
+                {% endfor %}
             </div>
             <div class="text-wrapper">
                 <div class="text-title">
