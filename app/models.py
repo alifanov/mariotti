@@ -65,13 +65,13 @@ class ServiceItem(models.Model):
         verbose_name_plural = u'Services'
         verbose_name = u'Service'
 
-# class ServiceItemImage(models.Model):
-#     image = models.ImageField(upload_to=u'uploads/', verbose_name=u'Image')
-#     service = models.ForeignKey(verbose_name=u'Service', related_name='images')
-#
-#     def __unicode__(self):
-#         return self.pk
-#
-#     class Meta:
-#         verbose_name = u'Service Image'
-#         verbose_name_plural = u'Service Images'
+class ServiceItemImage(models.Model):
+    image = models.ImageField(upload_to=u'uploads/', verbose_name=u'Image')
+    service = models.ForeignKey(ServiceItem, verbose_name=u'Service', related_name='images')
+
+    def __unicode__(self):
+        return self.pk
+
+    class Meta:
+        verbose_name = u'Service Image'
+        # verbose_name_plural = u'Service Images'
