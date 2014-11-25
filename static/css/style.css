@@ -389,7 +389,6 @@ ul.footer-menu {
 }
 
 .error-alert {
-    display: none;
     text-transform: uppercase;
     font-size: 11px;
     width: 230px;
@@ -397,6 +396,7 @@ ul.footer-menu {
     vertical-align: top;
     padding-top: 10px;
     color: red;
+    display: none;
 }
 
 .contact-form-wrapper textarea {
