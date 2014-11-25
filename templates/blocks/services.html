@@ -2,7 +2,7 @@
     {% for s in services %}
     <div class="services-item" {% if s.is_long %}id="service-bigger"{% endif %}>
         <img SRC="{{ s.icon.url }}" height="90" />
-        <div class="service-title active">{{ s.title|safe }}</div>
+        <div class="service-title {% if s.pk == service_active %}active{% endif %}">{{ s.title|safe }}</div>
         <div class="service-desc">{{ s.short_desc|safe }}</div>
         <a href="{% url 'service' pk=s.pk  %}">Далее</a>
     </div>

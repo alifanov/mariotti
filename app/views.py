@@ -24,3 +24,8 @@ class ServiceDetail(GeneralMixin, DetailView):
     model = ServiceItem
     template_name = 'service.html'
     context_object_name = 'service'
+
+    def get_context_data(self, **kwargs):
+        ctx = super(ServiceDetail, self).get_context_data(**kwargs)
+        ctx['service_active'] = self.get_object().pk
+        return ctx
