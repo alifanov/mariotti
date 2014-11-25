@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', TemplateView.as_view(template_name='empty.html'), name='home'),
-    url(r'^contacts/$', TemplateView.as_view(template_name='contacts.html'), name='contacts'),
+    url(r'^contacts/$', ContactsView.as_view(), name='contacts'),
     url(r'^home/$', HomeView.as_view(), name='home-1'),
     url(r'^about/$', AboutView.as_view(), name='about'),
     url(r'^service/(?P<slug>[-\w]+)/$', ServiceDetail.as_view(), name='service'),

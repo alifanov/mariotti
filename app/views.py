@@ -21,6 +21,9 @@ class AboutView(GeneralMixin, TemplateView):
         ctx['page'] = PageItem.objects.get(slug='about')
         return ctx
 
+class ContactsView(GeneralMixin, TemplateView):
+    template_name = 'contacts.html'
+
 class NewsList(GeneralMixin, ListView):
     model = NewsItem
     template_name = 'news-list.html'
