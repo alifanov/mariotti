@@ -9,17 +9,17 @@ class GeneralMixin(object):
         ctx['services'] = NewsItem.objects.order_by('-date')
         return ctx
 
-class NewsList(ListView):
+class NewsList(GeneralMixin, ListView):
     model = NewsItem
     template_name = 'news-list.html'
     context_object_name = 'news'
 
-class NewsDetail(DetailView):
+class NewsDetail(GeneralMixin, DetailView):
     model = NewsItem
     template_name = 'news-item.html'
     context_object_name = 'n'
 
-class ServiceDetail(DetailView):
+class ServiceDetail(GeneralMixin, DetailView):
     model = ServiceItem
     template_name = 'service.html'
     context_object_name = 'service'
