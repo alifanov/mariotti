@@ -26,6 +26,7 @@
     <div class="body-wrapper">
         <div class="container">
             <div class="gallery">
+            {{ n.images.all }}
                 {% for img in n.images.all %}
                     <img src="{{ img.url }}" width="292" />
                 {% endfor %}
