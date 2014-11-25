@@ -11,60 +11,22 @@
     </div>
     <div class="body-wrapper">
         <div class="container">
+            {% for n in news|slice:"5" %}
             <div class="news-item">
                 <div class="news-title">
-                    Название новости
+                    {{ n.title }}
                 </div>
                 <div class="news-date">
-                    12 июля 2015
+                    {{ n.date|date:"d.m.Y" }}
                 </div>
-                <img src="{{ STATIC_URL }}img/news-img.jpg" />
-                <a href="#">Читать новость</a>
+                <img src="{{ n.images.all.0.image.url }}" />
+                <a href="{% url 'news-item' pk=n.pk %}">Читать новость</a>
             </div>
-            <div class="news-item">
-                <div class="news-title">
-                    Название новости
-                </div>
-                <div class="news-date">
-                    12 июля 2015
-                </div>
-                <img src="{{ STATIC_URL }}img/news-img.jpg" />
-                <a href="#">Читать новость</a>
-            </div>
-            <div class="news-item">
-                <div class="news-title">
-                    Название новости
-                </div>
-                <div class="news-date">
-                    12 июля 2015
-                </div>
-                <img src="{{ STATIC_URL }}img/news-img.jpg" />
-                <a href="#">Читать новость</a>
-            </div>
-            <div class="news-item">
-                <div class="news-title">
-                    Название новости
-                </div>
-                <div class="news-date">
-                    12 июля 2015
-                </div>
-                <img src="{{ STATIC_URL }}img/news-img.jpg" />
-                <a href="#">Читать новость</a>
-            </div>
-            <div class="news-item">
-                <div class="news-title">
-                    Название новости
-                </div>
-                <div class="news-date">
-                    12 июля 2015
-                </div>
-                <img src="{{ STATIC_URL }}img/news-img.jpg" />
-                <a href="#">Читать новость</a>
-            </div>
+            {% endfor %}
         </div>
         <div class="container">
             <div class="home-news-bottom">
-                <a href="#">Читать все новости...</a>
+                <a href="{% url 'news' %}">Читать все новости...</a>
             </div>
         </div>
     </div>
