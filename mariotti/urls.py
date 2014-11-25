@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView
+from app.views import *
 
 from django.contrib import admin
 admin.autodiscover()
@@ -11,9 +11,9 @@ urlpatterns = patterns('',
     url(r'^home/$', TemplateView.as_view(template_name='home.html'), name='home-1'),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'^service/$', TemplateView.as_view(template_name='service.html'), name='service'),
-    url(r'^news-all/$', TemplateView.as_view(template_name='news-list.html'), name='news-all'),
+    url(r'^news/$', NewsList.as_view(), name='news'),
     url(r'^portfolio-all/$', TemplateView.as_view(template_name='portfolio-list.html'), name='portfolio-all'),
-    url(r'^news-item/$', TemplateView.as_view(template_name='news-item.html'), name='news-item'),
+    url(r'^news/(?P<slug>[-\w]+)/$', NewsDetail.as_view(), name='news-item'),
     url(r'^portfolio-item/$', TemplateView.as_view(template_name='portfolio-item.html'), name='portfolio-item'),
     # url(r'^blog/', include('blog.urls')),
 
