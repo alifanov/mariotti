@@ -27,7 +27,9 @@
                 <div class="news-date">
                     {{ port.date|date:"d.m.Y" }}
                 </div>
-                <img src="{{ port.images.all.0.image.url }}" />
+                {% thumbnail port.images.all.0.image '165x100' crop='center' as im %}
+                    <img src="{{ im.url }}" />
+                {% endthumbnail %}
                 <div class="news-desc">
                     {{ port.short_desc|safe }}
                 </div>
