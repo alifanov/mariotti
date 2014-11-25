@@ -8,7 +8,7 @@
         {% endthumbnail %}
         <div class="service-title {% if s.pk == service_active %}active{% endif %}">{{ s.title|safe }}</div>
         <div class="service-desc">{{ s.short_desc|safe }}</div>
-        <a href="{% url 'service' pk=s.slug  %}">Далее</a>
+        <a href="{% url 'service' slug=s.slug  %}">Далее</a>
     </div>
     {% endfor %}
 </div>
