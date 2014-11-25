@@ -38,7 +38,7 @@
             </div>
             <div class="text-wrapper">
                 <div class="text-title">
-                    {{ service.title }}
+                    {{ service.title|striptags }}
                 </div>
                 <div class="text-body">
                     {{ service.text|safe }}
