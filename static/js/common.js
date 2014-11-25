@@ -22,7 +22,32 @@ $(function(){
 //    });
 
     $(".contact-form-wrapper form").submit(function(){
-
+        $(".error-alert").hide();
+        $(this).find('input[name="email"]').removeClass('error');
+        if($(this).find('input[name="name"]').val() == ''){
+            $(this).find('input[name="name"]').addClass('error');
+            $(".error-alert").show();
+            return false;
+        }
+        if($(this).find('input[name="email"]').val() == ''){
+            $(this).find('input[name="email"]').addClass('error');
+            $(".error-alert").show();
+            return false;
+        }
+        $.ajax({
+            'type': 'POST',
+            'url': '/contact/apply/',
+            data: $(this).serializeArray(),
+            success: function(){
+                $.fancybox("#thx-msg", {
+                    padding: 0,
+                    closeBtn: false
+                });
+                setTimeout(function(){
+                    $.fancybox.hide();
+                }, 3000);
+            }
+        });
         return false;
     });
 });

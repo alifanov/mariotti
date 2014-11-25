@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from app.models import *
 from app.forms import *
-from django.views.generic import ListView, DetailView, TemplateView
+from django.http import HttpResponse
+from django.views.generic import ListView, DetailView, TemplateView, View
 # Create your views here.
 
 class GeneralMixin(object):
@@ -29,6 +30,13 @@ class ContactsView(GeneralMixin, TemplateView):
         ctx = super(ContactsView, self).get_context_data(**kwargs)
         ctx['form'] = ContactPageForm()
         return ctx
+
+class ContactsApplyAjaxView(View):
+    def post(self, request, *args, **kwargs):
+        form = ContactPageForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return HttpResponse('OK')
 
 class NewsList(GeneralMixin, ListView):
     model = NewsItem
