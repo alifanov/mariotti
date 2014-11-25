@@ -26,6 +26,16 @@ class NewsDetail(GeneralMixin, DetailView):
     template_name = 'news-item.html'
     context_object_name = 'n'
 
+class PortfolioList(GeneralMixin, ListView):
+    model = PortfolioItem
+    template_name = 'portfolio-list.html'
+    context_object_name = 'ports'
+
+class PortfolioDetail(GeneralMixin, DetailView):
+    model = PortfolioItem
+    template_name = 'portfolio-item.html'
+    context_object_name = 'port'
+
 class ServiceDetail(GeneralMixin, DetailView):
     model = ServiceItem
     template_name = 'service.html'

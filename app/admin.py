@@ -15,6 +15,13 @@ class ServiceItemImageInline(admin.TabularInline):
 class ServiceItemAdmin(admin.ModelAdmin):
     inlines = [ServiceItemImageInline,]
 
-admin.site.register(PortfolioItem)
+
+class PortfolioItemImageInline(admin.TabularInline):
+    model = PortfolioItemImage
+
+class PortfolioItemAdmin(admin.ModelAdmin):
+    inlines = [PortfolioItemImageInline,]
+
+admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(ServiceItem, ServiceItemAdmin)
 admin.site.register(NewsItem, NewsItemAdmin)
