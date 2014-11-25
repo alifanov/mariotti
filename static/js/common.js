@@ -23,6 +23,7 @@ $(function(){
 
     $(".contact-form-wrapper form").submit(function(){
         $(".error-alert").hide();
+        $(this).find('input[name="name"]').removeClass('error');
         $(this).find('input[name="email"]').removeClass('error');
         if($(this).find('input[name="name"]').val() == ''){
             $(this).find('input[name="name"]').addClass('error');
