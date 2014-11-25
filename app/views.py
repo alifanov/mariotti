@@ -18,3 +18,8 @@ class NewsDetail(DetailView):
     model = NewsItem
     template_name = 'news-item.html'
     context_object_name = 'n'
+
+class ServiceDetail(DetailView):
+    model = ServiceItem
+    template_name = 'service.html'
+    context_object_name = 'service'
