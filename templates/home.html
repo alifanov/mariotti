@@ -24,7 +24,7 @@
                 {% thumbnail n.images.all.0.image '165x100' crop='center' as im %}
                     <img src="{{ im.url }}" />
                 {% endthumbnail %}
-                <a href="{% url 'news-item' pk=n.pk %}">Читать новость</a>
+                <a href="{% url 'news-item' pk=n.slug %}">Читать новость</a>
             </div>
             {% endfor %}
         </div>

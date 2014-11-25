@@ -60,7 +60,7 @@
                 <div class="news-desc">
                     {{ port.short_desc|safe }}
                 </div>
-                <a href="{% url 'portfolio-item' pk=port.pk %}">Далее</a>
+                <a href="{% url 'portfolio-item' pk=port.slug %}">Далее</a>
             </div>
             {% endfor %}
         </div>
