@@ -26,9 +26,8 @@
     <div class="body-wrapper">
         <div class="container">
             <div class="gallery">
-            {{ n.images.count }}
                 {% for img in n.images.all %}
-                    <img src="{{ img.url }}" width="292" />
+                    <img src="{{ img.image.url }}" width="292" />
                 {% endfor %}
             </div>
             <div class="text-wrapper">
