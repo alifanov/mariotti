@@ -33,6 +33,7 @@ class PortfolioItem(models.Model):
     title = models.CharField(max_length=255, verbose_name=u'Title')
     short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
     text = models.TextField(verbose_name=u'Text')
+    date = models.DateField(verbose_name=u'Date')
 
     def __unicode__(self):
         return self.title
