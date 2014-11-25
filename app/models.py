@@ -4,6 +4,30 @@ from django.db import models
 # Create your models here.
 
 
+class PageItem(models.Model):
+    title = models.CharField(max_length=255, verbose_name=u'Title')
+    text = models.TextField(verbose_name=u'Text')
+    slug = models.CharField(max_length=255, verbose_name=u'Slug')
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = u'Pages'
+        verbose_name = u'Page'
+
+class PageImage(models.Model):
+    image = models.ImageField(verbose_name=u'Image', upload_to=u'uploads/')
+    page = models.ForeignKey(NewsItem, related_name='images')
+
+    def __unicode__(self):
+        return self.pk
+
+    class Meta:
+        verbose_name = u'Page images'
+        verbose_name_plural = u'Page image'
+
+
 class NewsItem(models.Model):
     title = models.CharField(max_length=255, verbose_name=u'Title')
     date = models.DateField(verbose_name=u'Date')
