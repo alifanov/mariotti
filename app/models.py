@@ -57,6 +57,7 @@ class ServiceItem(models.Model):
     short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
     icon = models.ImageField(verbose_name=u'Icon', upload_to=u'uploads/')
     text = models.TextField(verbose_name=u'Text')
+    order = models.IntegerField(default=0, verbose_name=u'Order')
 
     def __unicode__(self):
         return self.title
