@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load thumbnail %}
+
 {% block content %}
     <div class="container">
         <div class="breadcrumbs">
@@ -32,7 +34,9 @@
         <div class="container">
             <div class="gallery">
                 {% for img in service.images.all %}
-                    <img src="{{ img.image.url }}" width="292" />
+                    {% thumbnail img.image '292x214' crop='center' as im %}
+                        <img src="{{ im.url }}" width="292" />
+                    {% endthumbnail %}
                 {% endfor %}
             </div>
             <div class="text-wrapper">
