@@ -16,6 +16,11 @@ class HomeView(GeneralMixin, TemplateView):
 class AboutView(GeneralMixin, TemplateView):
     template_name = 'about.html'
 
+    def get_context_data(self, **kwargs):
+        ctx = super(AboutView, self).get_context_data(**kwargs)
+        ctx['page'] = PageItem.objects.get(slug='about')
+        return ctx
+
 class NewsList(GeneralMixin, ListView):
     model = NewsItem
     template_name = 'news-list.html'
