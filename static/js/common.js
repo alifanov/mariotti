@@ -37,7 +37,7 @@ $(function(){
         }
         $.ajax({
             'type': 'POST',
-            'url': '/contact/apply/',
+            'url': '/contacts/apply/',
             data: $(this).serializeArray(),
             success: function(){
                 $.fancybox("#thx-msg", {
