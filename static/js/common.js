@@ -20,4 +20,9 @@ $(function(){
         });
         return false;
     });
+
+    $(".contact-form-wrapper form").submit(function(){
+
+        return false;
+    });
 });
