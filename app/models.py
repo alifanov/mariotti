@@ -59,6 +59,10 @@ class ServiceItem(models.Model):
     text = models.TextField(verbose_name=u'Text')
     order = models.IntegerField(default=0, verbose_name=u'Order')
 
+    def is_long(self):
+        if self.title.count('<br/>') == 2:
+            return True
+
     def __unicode__(self):
         return self.title
 
