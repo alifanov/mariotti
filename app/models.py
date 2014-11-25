@@ -4,19 +4,19 @@ from django.db import models
 # Create your models here.
 
 
-# class NewsItem(models.Model):
-#     title = models.CharField(max_length=255, verbose_name=u'Title')
-#     date = models.DateField(auto_now_add=True, verbose_name=u'Date', editable=True)
-#     short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
-#     text = models.TextField(verbose_name=u'Text')
-#
-#     def __unicode__(self):
-#         return self.title
-#
-#     class Meta:
-#         verbose_name_plural = u'Новости'
-#         verbose_name = u'Новость'
-#
+class NewsItem(models.Model):
+    title = models.CharField(max_length=255, verbose_name=u'Title')
+    date = models.DateField(auto_now_add=True, verbose_name=u'Date', editable=True)
+    short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
+    text = models.TextField(verbose_name=u'Text')
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = u'Новости'
+        verbose_name = u'Новость'
+
 # class NewsImage(models.Model):
 #     image = models.ImageField(verbose_name=u'Image', upload_to=u'uploads/')
 #     news = models.ForeignKey(NewsItem, related_name='images')
