@@ -25,7 +25,14 @@ class PortfolioItemAdmin(admin.ModelAdmin):
     inlines = [PortfolioItemImageInline,]
     prepopulated_fields = {"slug": ("title",)}
 
+class PageItemImageInline(admin.TabularInline):
+    model = PageImage
+
+class PageItemAdmin(admin.ModelAdmin):
+    inlines = [PageItemImageInline,]
+    prepopulated_fields = {"slug": ("title",)}
+
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(ServiceItem, ServiceItemAdmin)
 admin.site.register(NewsItem, NewsItemAdmin)
-admin.site.register(PageItem)
+admin.site.register(PageItem, PageItemAdmin)
