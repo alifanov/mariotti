@@ -7,6 +7,7 @@ class NewsItemImageInline(admin.TabularInline):
 
 class NewsItemAdmin(admin.ModelAdmin):
     inlines = [NewsItemImageInline,]
+    prepopulated_fields = {"slug": ("title",)}
 
 
 class ServiceItemImageInline(admin.TabularInline):
@@ -14,6 +15,7 @@ class ServiceItemImageInline(admin.TabularInline):
 
 class ServiceItemAdmin(admin.ModelAdmin):
     inlines = [ServiceItemImageInline,]
+    prepopulated_fields = {"slug": ("title",)}
 
 
 class PortfolioItemImageInline(admin.TabularInline):
@@ -21,6 +23,7 @@ class PortfolioItemImageInline(admin.TabularInline):
 
 class PortfolioItemAdmin(admin.ModelAdmin):
     inlines = [PortfolioItemImageInline,]
+    prepopulated_fields = {"slug": ("title",)}
 
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(ServiceItem, ServiceItemAdmin)

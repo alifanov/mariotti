@@ -9,6 +9,7 @@ class NewsItem(models.Model):
     date = models.DateField(verbose_name=u'Date')
     short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
     text = models.TextField(verbose_name=u'Text')
+    slug = models.CharField(max_length=255, verbose_name=u'Slug')
 
     def __unicode__(self):
         return self.title
@@ -34,6 +35,7 @@ class PortfolioItem(models.Model):
     short_desc = models.TextField(blank=True, null=True, verbose_name=u'Short desc')
     text = models.TextField(verbose_name=u'Text')
     date = models.DateField(verbose_name=u'Date')
+    slug = models.CharField(max_length=255, verbose_name=u'Slug')
 
     def __unicode__(self):
         return self.title
@@ -59,6 +61,7 @@ class ServiceItem(models.Model):
     icon = models.ImageField(verbose_name=u'Icon', upload_to=u'uploads/')
     text = models.TextField(verbose_name=u'Text')
     order = models.IntegerField(default=0, verbose_name=u'Order')
+    slug = models.CharField(max_length=255, verbose_name=u'Slug')
 
     def is_long(self):
         if self.title.count('<br/>') == 2:
