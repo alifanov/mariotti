@@ -26,12 +26,12 @@ $(function(){
         $(this).find('input[name="email"]').removeClass('error');
         if($(this).find('input[name="name"]').val() == ''){
             $(this).find('input[name="name"]').addClass('error');
-            $(".error-alert").show();
+            $(".error-alert").css('display', 'inline-block');
             return false;
         }
         if($(this).find('input[name="email"]').val() == ''){
             $(this).find('input[name="email"]').addClass('error');
-            $(".error-alert").show();
+            $(".error-alert").css('display', 'inline-block');
             return false;
         }
         $.ajax({
