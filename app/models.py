@@ -18,7 +18,7 @@ class PageItem(models.Model):
 
 class PageImage(models.Model):
     image = models.ImageField(verbose_name=u'Image', upload_to=u'uploads/')
-    page = models.ForeignKey(NewsItem, related_name='images')
+    page = models.ForeignKey(PageItem, related_name='images')
 
     def __unicode__(self):
         return self.pk
