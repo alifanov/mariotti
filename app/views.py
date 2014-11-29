@@ -1,8 +1,10 @@
+#coding: utf-8
 from django.shortcuts import render
 from app.models import *
 from app.forms import *
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, TemplateView, View
+from django.core.urlresolvers import reverse
 # Create your views here.
 
 class GeneralMixin(object):
@@ -79,4 +81,7 @@ class ServiceDetail(GeneralMixin, DetailView):
         ctx = super(ServiceDetail, self).get_context_data(**kwargs)
         ctx['service_active'] = self.get_object().pk
         ctx['active'] = 'service'
+        ctx['breadcrumbs'] = (
+            (u'Главная', reverse('service', kwargs={'slug': self.get_object().slug}))
+        )
         return ctx
