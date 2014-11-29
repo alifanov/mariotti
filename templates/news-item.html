@@ -55,7 +55,7 @@
                 <div class="news-desc">
                     {{ n.short_desc|safe }}
                 </div>
-                <a href="{% url  'news-item' n.pk %}">Читать новость</a>
+                <a href="{% url  'news-item' n.slug %}">Читать новость</a>
             </div>
             {% endfor %}
         </div>
