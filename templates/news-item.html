@@ -6,21 +6,16 @@
     <div class="container">
         <div class="breadcrumbs">
         <ul>
+            {% for bc in breadcrumbs %}
             <li>
-                <a href="#">Главная</a>
+                <a href="{{ bc.1 }}">{{ bc.0 }}</a>
             </li>
-            <li>
-                <span> > </span>
-            </li>
-            <li>
-                <a href="#">Новости</a>
-            </li>
-            <li>
-                <span> > </span>
-            </li>
-            <li>
-                <a href="#">Новости 1</a>
-            </li>
+                {% if not forloop.last %}
+                    <li>
+                        <span> > </span>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
 
