@@ -82,6 +82,6 @@ class ServiceDetail(GeneralMixin, DetailView):
         ctx['service_active'] = self.get_object().pk
         ctx['active'] = 'service'
         ctx['breadcrumbs'] = (
-            (u'Главная', reverse('service', kwargs={'slug': self.get_object().slug}))
+            (u'Главная', reverse('service', kwargs={'slug': self.get_object().slug})),
         )
         return ctx
