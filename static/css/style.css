@@ -33,6 +33,7 @@ ul.header-menu {
 .header-menu li {
     float: left;
     list-style-type: none;
+    margin-right: 5px;
 }
 
 .header-menu li a {
@@ -75,7 +76,11 @@ ul.header-menu {
 .fc-title {
     text-transform: uppercase;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 12px;
+}
+
+.fc-body {
+    font-size: 10px;
 }
 
 ul.footer-menu {
