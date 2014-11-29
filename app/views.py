@@ -60,6 +60,11 @@ class PortfolioList(GeneralMixin, ListView):
     def get_context_data(self, **kwargs):
         ctx = super(PortfolioList, self).get_context_data(**kwargs)
         ctx['active'] = 'portfolio'
+        ctx['breadcrumbs'] = (
+            (u'Главная', reverse('home-1')),
+            (u'Услуги', reverse('service', kwargs={'slug': self.get_object().slug})),
+            (self.get_object().title, reverse('service', kwargs={'slug': self.get_object().slug})),
+        )
         return ctx
 
 class PortfolioDetail(GeneralMixin, DetailView):
@@ -70,6 +75,11 @@ class PortfolioDetail(GeneralMixin, DetailView):
     def get_context_data(self, **kwargs):
         ctx = super(PortfolioDetail, self).get_context_data(**kwargs)
         ctx['active'] = 'portfolio'
+        ctx['breadcrumbs'] = (
+            (u'Главная', reverse('home-1')),
+            (u'Портфолио', reverse('portfolio')),
+            (self.get_object().title, reverse('portfolio-item', kwargs={'slug': self.get_object().slug})),
+        )
         return ctx
 
 class ServiceDetail(GeneralMixin, DetailView):
