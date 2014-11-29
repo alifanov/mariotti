@@ -3,9 +3,11 @@
 <div class="services">
     {% for s in services %}
     <div class="services-item" {% if s.is_long %}id="service-bigger"{% endif %}>
+        <a href="{% url 'service' slug=s.slug  %}">
         {% thumbnail s.icon '90x90' crop='center' as im %}
             <img SRC="{{ im.url }}" height="90" />
         {% endthumbnail %}
+        </a>
         <div class="service-title {% if s.pk == service_active %}active{% endif %}">{{ s.title|safe }}</div>
         <div class="service-desc">{{ s.short_desc|safe }}</div>
         <a href="{% url 'service' slug=s.slug  %}">Далее</a>
