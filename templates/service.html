@@ -8,7 +8,7 @@
         <ul>
             {% for bc in breadcrumbs %}
             <li>
-                <a href="{{ bc.1 }}">{{ bc.0 }}</a>
+                <a href="{{ bc.1 }}">{{ bc.0|striptags }}</a>
             </li>
                 {% if not forloop.last %}
                     <li>
