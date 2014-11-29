@@ -1,7 +1,19 @@
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('/static/fonts/helvetica-webfont.eot');
+    src: url('/static/fonts/helvetica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/helvetica-webfont.woff2') format('woff2'),
+         url('/static/fonts/helvetica-webfont.woff') format('woff'),
+         url('/static/fonts/helvetica-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html,body {
     padding: 0;
     margin: 0;
-    font-family: Helvetica;
+    font-family: 'helveticaregular';
 }
 
 .header {
