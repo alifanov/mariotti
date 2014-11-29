@@ -21,6 +21,7 @@ class AboutView(GeneralMixin, TemplateView):
     def get_context_data(self, **kwargs):
         ctx = super(AboutView, self).get_context_data(**kwargs)
         ctx['page'] = PageItem.objects.get(slug='about')
+        ctx['active'] = 'about'
         return ctx
 
 class ContactsView(GeneralMixin, TemplateView):
@@ -29,6 +30,7 @@ class ContactsView(GeneralMixin, TemplateView):
     def get_context_data(self, **kwargs):
         ctx = super(ContactsView, self).get_context_data(**kwargs)
         ctx['form'] = ContactPageForm()
+        ctx['active'] = 'contacts'
         return ctx
 
 class ContactsApplyAjaxView(View):
@@ -53,10 +55,20 @@ class PortfolioList(GeneralMixin, ListView):
     template_name = 'portfolio-list.html'
     context_object_name = 'ports'
 
+    def get_context_data(self, **kwargs):
+        ctx = super(PortfolioList, self).get_context_data(**kwargs)
+        ctx['active'] = 'portfolio'
+        return ctx
+
 class PortfolioDetail(GeneralMixin, DetailView):
     model = PortfolioItem
     template_name = 'portfolio-item.html'
     context_object_name = 'port'
+
+    def get_context_data(self, **kwargs):
+        ctx = super(PortfolioDetail, self).get_context_data(**kwargs)
+        ctx['active'] = 'portfolio'
+        return ctx
 
 class ServiceDetail(GeneralMixin, DetailView):
     model = ServiceItem
@@ -66,4 +78,5 @@ class ServiceDetail(GeneralMixin, DetailView):
     def get_context_data(self, **kwargs):
         ctx = super(ServiceDetail, self).get_context_data(**kwargs)
         ctx['service_active'] = self.get_object().pk
+        ctx['active'] = 'service'
         return ctx

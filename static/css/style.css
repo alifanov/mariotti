@@ -44,7 +44,9 @@ ul.header-menu {
     font-size: 12px;
 }
 
-.header-menu li:hover a {
+.header-menu li:hover a,
+.header-menu li.active a
+{
     background: #7d7c7c;
     color: white;
     border-radius: 3px;
@@ -138,6 +140,7 @@ ul.footer-menu {
     border-bottom: 5px solid #6f7071;
     margin-bottom: 17px;
     font-size: 15px;
+    line-height: 1.2;
 }
 
 

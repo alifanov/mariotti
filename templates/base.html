@@ -21,16 +21,16 @@
                <li>
                    <a href="{% url 'home-1' %}">Главная</a>
                </li>
-               <li>
+               <li {% if active == 'about' %}class="active"{% endif %}>
                    <a href="{% url 'about' %}">О компании</a>
                </li>
-               <li>
+               <li {% if active == 'portfolio' %}class="active"{% endif %}>
                    <a href="{% url 'portfolio' %}">Портфолио</a>
                </li>
-               <li>
+               <li {% if active == 'service' %}class="active"{% endif %}>
                    <a href="{% url 'service' slug='serv1' %}">Услуги</a>
                </li>
-               <li>
+               <li {% if active == 'contacts' %}class="active"{% endif %}>
                    <a href="{% url 'contacts' %}">Контакты</a>
                </li>
            </ul>
