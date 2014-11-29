@@ -62,8 +62,7 @@ class PortfolioList(GeneralMixin, ListView):
         ctx['active'] = 'portfolio'
         ctx['breadcrumbs'] = (
             (u'Главная', reverse('home-1')),
-            (u'Услуги', reverse('service', kwargs={'slug': self.get_object().slug})),
-            (self.get_object().title, reverse('service', kwargs={'slug': self.get_object().slug})),
+            (u'Портфолио', reverse('portfolio')),
         )
         return ctx
 
