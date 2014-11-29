@@ -47,10 +47,27 @@ class NewsList(GeneralMixin, ListView):
     template_name = 'news-list.html'
     context_object_name = 'news'
 
+    def get_context_data(self, **kwargs):
+        ctx = super(NewsList, self).get_context_data(**kwargs)
+        ctx['breadcrumbs'] = (
+            (u'Главная', reverse('home-1')),
+            (u'Новости', reverse('news')),
+        )
+        return ctx
+
 class NewsDetail(GeneralMixin, DetailView):
     model = NewsItem
     template_name = 'news-item.html'
     context_object_name = 'n'
+
+    def get_context_data(self, **kwargs):
+        ctx = super(NewsDetail, self).get_context_data(**kwargs)
+        ctx['breadcrumbs'] = (
+            (u'Главная', reverse('home-1')),
+            (u'Новости', reverse('news')),
+            (self.get_object().title, reverse('news-item', kwargs={'slug': self.get_object().slug})),
+        )
+        return ctx
 
 class PortfolioList(GeneralMixin, ListView):
     model = PortfolioItem
