@@ -475,9 +475,10 @@ ul.footer-menu {
 .social {
     position: absolute;
     width: 200px;
-    left: 430px;
+    left: 470px;
 }
 
 .social li {
     display: inline-block;
+    margin-right: 10px;
 }
