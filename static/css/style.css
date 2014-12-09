@@ -471,3 +471,9 @@ ul.footer-menu {
     right: 10px;
     bottom: 10px;
 }
+
+.social {
+    position: absolute;
+    width: 200px;
+    left: 430px;
+}
