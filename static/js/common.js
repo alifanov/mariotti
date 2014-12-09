@@ -4,7 +4,7 @@
 $(function(){
     $(".gallery").owlCarousel({
         items:1,
-        loop: true,
+        loop: false,
         dots: true
     });
 
