@@ -1,7 +1,9 @@
 <div class="services">
     {% for s in services %}
     <div class="services-item" {% if s.is_long %}id="service-bigger"{% endif %}>
-        <div class="service-title">{{ s.title|safe }}</div>
+        <a href="{% url 'service' slug=s.slug %}">
+            <div class="service-title">{{ s.title|safe }}</div>
+        </a>
         <div class="service-desc">{{ s.short_desc|safe }}</div>
         <a href="{% url 'service' slug=s.slug %}">Далее</a>
     </div>

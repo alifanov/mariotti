@@ -7,8 +7,8 @@
         {% thumbnail s.icon '90x90' crop='center' as im %}
             <img SRC="{{ im.url }}" height="90" />
         {% endthumbnail %}
-        </a>
         <div class="service-title {% if s.pk == service_active %}active{% endif %}">{{ s.title|safe }}</div>
+        </a>
         <div class="service-desc">{{ s.short_desc|safe }}</div>
         <a href="{% url 'service' slug=s.slug  %}">Далее</a>
     </div>
