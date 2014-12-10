@@ -15,15 +15,19 @@
         <div class="container">
             {% for n in news|slice:"5" %}
             <div class="news-item">
-                <div class="news-title">
-                    {{ n.title }}
-                </div>
+                <a href="{% url 'news-item' slug=n.slug %}">
+                    <div class="news-title">
+                        {{ n.title }}
+                    </div>
+                </a>
                 <div class="news-date">
                     {{ n.date|date:"d.m.Y" }}
                 </div>
-                {% thumbnail n.images.all.0.image '165x100' crop='center' as im %}
-                    <img src="{{ im.url }}" />
-                {% endthumbnail %}
+                <a href="{% url 'news-item' slug=n.slug %}">
+                    {% thumbnail n.images.all.0.image '165x100' crop='center' as im %}
+                        <img src="{{ im.url }}" />
+                    {% endthumbnail %}
+                </a>
                 <a href="{% url 'news-item' slug=n.slug %}">Читать новость</a>
             </div>
             {% endfor %}
