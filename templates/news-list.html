@@ -24,15 +24,19 @@
         <div class="container">
             {% for n in news %}
             <div class="news-item">
-                <div class="news-title">
-                    {{ n.title }}
-                </div>
+                <a href="{% url  'news-item' n.slug %}">
+                    <div class="news-title">
+                        {{ n.title }}
+                    </div>
+                </a>
                 <div class="news-date">
                     {{ n.date|date:"d.m.Y" }}
                 </div>
-                {% thumbnail n.images.all.0.image '165x100' crop='center' as im %}
-                    <img src="{{ im.url }}" />
-                {% endthumbnail %}
+                <a href="{% url  'news-item' n.slug %}">
+                    {% thumbnail n.images.all.0.image '165x100' crop='center' as im %}
+                        <img src="{{ im.url }}" />
+                    {% endthumbnail %}
+                </a>
                 <div class="news-desc">
                     {{ n.short_desc|safe }}
                 </div>
