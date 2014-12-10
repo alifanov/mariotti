@@ -6,10 +6,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', TemplateView.as_view(template_name='empty.html'), name='home'),
+    # url(r'^$', TemplateView.as_view(template_name='empty.html'), name='home'),
     url(r'^contacts/$', ContactsView.as_view(), name='contacts'),
     url(r'^contacts/apply/$', ContactsApplyAjaxView.as_view(), name='contacts-apply'),
-    url(r'^home/$', HomeView.as_view(), name='home-1'),
+    url(r'^$', HomeView.as_view(), name='home-1'),
     url(r'^about/$', AboutView.as_view(), name='about'),
     url(r'^service/(?P<slug>[-\w]+)/$', ServiceDetail.as_view(), name='service'),
     url(r'^news/$', NewsList.as_view(), name='news'),
