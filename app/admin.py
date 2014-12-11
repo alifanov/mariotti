@@ -3,6 +3,13 @@ from app.models import *
 from redactor.widgets import AdminRedactorEditor
 # Register your models here.
 
+from django import forms
+
+class ServiceForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ServiceForm, self).__init__(*args, **kwargs)
+        self.fields['text'].widget = AdminRedactorEditor()
+
 class NewsItemImageInline(admin.TabularInline):
     model = NewsImage
 
@@ -17,11 +24,7 @@ class ServiceItemImageInline(admin.TabularInline):
 class ServiceItemAdmin(admin.ModelAdmin):
     inlines = [ServiceItemImageInline,]
     prepopulated_fields = {"slug": ("title",)}
-
-    formfield_overrides = {
-            models.TextField: {'widget': AdminRedactorEditor},
-    }
-
+    form = ServiceForm
 
 class PortfolioItemImageInline(admin.TabularInline):
     model = PortfolioItemImage
