@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'south',
     'sorl.thumbnail',
     'widget_tweaks',
+    'redactor',
     'app',
 )
 

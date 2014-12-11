@@ -1,5 +1,6 @@
 from django.contrib import admin
 from app.models import *
+from redactor.widgets import AdminRedactorEditor
 # Register your models here.
 
 class NewsItemImageInline(admin.TabularInline):
@@ -16,6 +17,10 @@ class ServiceItemImageInline(admin.TabularInline):
 class ServiceItemAdmin(admin.ModelAdmin):
     inlines = [ServiceItemImageInline,]
     prepopulated_fields = {"slug": ("title",)}
+
+    formfield_overrides = {
+            models.TextField: {'widget': AdminRedactorEditor},
+    }
 
 
 class PortfolioItemImageInline(admin.TabularInline):
