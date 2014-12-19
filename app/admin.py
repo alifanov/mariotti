@@ -36,9 +36,16 @@ class PortfolioItemAdmin(admin.ModelAdmin):
 class PageItemImageInline(admin.TabularInline):
     model = PageImage
 
+class PageItemForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(PageItemForm, self).__init__(*args, **kwargs)
+        self.fields['text'].widget = AdminRedactorEditor()
+
 class PageItemAdmin(admin.ModelAdmin):
     inlines = [PageItemImageInline,]
     prepopulated_fields = {"slug": ("title",)}
+    form = PageItemForm
+
 
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
 admin.site.register(ServiceItem, ServiceItemAdmin)
