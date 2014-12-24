@@ -30,7 +30,9 @@
             <div class="gallery">
                 {% for img in service.images.all %}
                     {% thumbnail img.image '292x214' crop='center' as im %}
-                        <img src="{{ im.url }}" width="292" />
+                        <a href="{{ img.image.url }}" class="fancybox">
+                            <img src="{{ im.url }}" width="292" />
+                        </a>
                     {% endthumbnail %}
                 {% endfor %}
             </div>
