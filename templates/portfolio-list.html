@@ -25,7 +25,7 @@
             {% for port in ports %}
             <div class="news-item">
                 <div class="news-title">
-                    {{ port.title }}
+                    <a href="{% url 'portfolio-item' slug=port.slug %}">{{ port.title }}</a>
                 </div>
                 <div class="news-date">
                     {{ port.date|date:"d.m.Y" }}
