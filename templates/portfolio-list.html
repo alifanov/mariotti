@@ -31,7 +31,9 @@
                     {{ port.date|date:"d.m.Y" }}
                 </div>
                 {% thumbnail port.images.all.0.image '165x100' crop='center' as im %}
-                    <img src="{{ im.url }}" />
+                    <a href="{% url 'portfolio-item' slug=port.slug %}">
+                        <img src="{{ im.url }}" />
+                    </a>
                 {% endthumbnail %}
                 <div class="news-desc">
                     {{ port.short_desc|safe }}
