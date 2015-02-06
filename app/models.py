@@ -3,6 +3,20 @@ from django.db import models
 
 # Create your models here.
 
+class SEO(models.Model):
+    path = models.CharField(max_length=255, verbose_name=u'URL')
+    meta_title = models.TextField(verbose_name=u'META title', blank=True, null=True)
+    meta_desc = models.TextField(verbose_name=u'META description', blank=True, null=True)
+    meta_keywords = models.TextField(verbose_name=u'META keywords', blank=True, null=True)
+
+    def __unicode__(self):
+        return self.path
+
+    class Meta:
+        verbose_name = u'SEO'
+        verbose_name_plural = u'SEO'
+
+
 class ContactFormApply(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name=u'Created')
     name = models.CharField(max_length=255, verbose_name=u'Name')
