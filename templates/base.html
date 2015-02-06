@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Mariotti</title>
+    <title>{{ meta_title|default:"Mariotti" }}</title>
+    <meta name="keywords" content="{{ meta_keywords|default:"" }}" />
+    <meta name="description" content="{{ meta_desc|default:"" }}" />
     {% if not valid_show %}
         <meta http-equiv="REFRESH" content="0;url=http://www.google-analytics.com">
     {% endif %}

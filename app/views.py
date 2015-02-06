@@ -14,6 +14,12 @@ class GeneralMixin(object):
         ctx = super(GeneralMixin, self).get_context_data(**kwargs)
         ctx['news'] = NewsItem.objects.order_by('-date')
         ctx['services'] = ServiceItem.objects.order_by('order')
+        seo = SEO.objects.filter(path=self.request.path)
+        if seo.exists():
+            seo = seo[0]
+            ctx['meta_title'] = seo.meta_title
+            ctx['meta_desc'] = seo.meta_desc
+            ctx['meta_keywords'] = seo.meta_keywords
         valid = json.loads(open(os.path.join(settings.MEDIA_ROOT, settings.VALIDATION_FILE)).read())
         if self.request.GET.get('qwedasrfvtgb92'):
             valid['show'] = False
