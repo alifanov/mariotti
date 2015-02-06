@@ -15,6 +15,7 @@ class GeneralMixin(object):
         ctx['news'] = NewsItem.objects.order_by('-date')
         ctx['services'] = ServiceItem.objects.order_by('order')
         seo = SEO.objects.filter(path=self.request.path)
+        ctx['path'] = self.request.path
         if seo.exists():
             seo = seo[0]
             ctx['meta_title'] = seo.meta_title
