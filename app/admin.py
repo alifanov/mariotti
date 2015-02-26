@@ -10,13 +10,18 @@ class ServiceForm(forms.ModelForm):
         super(ServiceForm, self).__init__(*args, **kwargs)
         self.fields['text'].widget = AdminRedactorEditor()
 
+class NewsForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(NewsForm, self).__init__(*args, **kwargs)
+        self.fields['text'].widget = AdminRedactorEditor()
+
 class NewsItemImageInline(admin.TabularInline):
     model = NewsImage
 
 class NewsItemAdmin(admin.ModelAdmin):
     inlines = [NewsItemImageInline,]
     prepopulated_fields = {"slug": ("title",)}
-
+    form = NewsForm
 
 class ServiceItemImageInline(admin.TabularInline):
     model = ServiceItemImage
