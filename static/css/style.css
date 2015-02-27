@@ -196,6 +196,10 @@ ul.footer-menu {
     line-height: 1.5;
 }
 
+.text-body a {
+    color: #6f7071;
+}
+
 .gallery img {
     border: 10px solid white;
 }
