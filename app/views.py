@@ -132,5 +132,5 @@ class ServiceDetail(GeneralMixin, DetailView):
 
 class SitemapView(View):
     def get(self, request, *args, **kwargs):
-        s = django_settings.get('sitemap', '')
+        s = django_settings.get('sitemap', default='')
         return HttpResponse(s, content_type='text/xml')
