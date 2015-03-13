@@ -5,7 +5,7 @@ from app.forms import *
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, TemplateView, View
 from django.core.urlresolvers import reverse
-import json, os
+import json, os, django_settings
 from django.conf import settings
 # Create your views here.
 
@@ -129,3 +129,8 @@ class ServiceDetail(GeneralMixin, DetailView):
             (self.get_object().title, reverse('service', kwargs={'slug': self.get_object().slug})),
         )
         return ctx
+
+class SitemapView(View):
+    def get(self, request, *args, **kwargs):
+        s = django_settings.get('sitemap', '')
+        return HttpResponse(s, content_type='text/xml')

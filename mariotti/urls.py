@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^news/(?P<slug>[-\w]+)/$', NewsDetail.as_view(), name='news-item'),
     url(r'^portfolio/$', PortfolioList.as_view(), name='portfolio'),
     url(r'^portfolio/(?P<slug>[-\w]+)/$', PortfolioDetail.as_view(), name='portfolio-item'),
+    url(r'^sitemap\.xml$', SitemapView.as_view(), name='sitemap'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
