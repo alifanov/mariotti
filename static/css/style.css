@@ -489,3 +489,9 @@ ul.footer-menu {
     display: inline-block;
     margin-right: 10px;
 }
+
+.sitemap {
+    position: absolute;
+  left: 550px;
+  top: 60px;
+}
