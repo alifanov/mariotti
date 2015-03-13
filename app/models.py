@@ -2,6 +2,13 @@
 from django.db import models
 
 # Create your models here.
+import django_settings
+
+class Text(django_settings.db.Model):
+    value = models.TextField()
+    class Meta:
+        abstract = True   # it's IMPORTANT - it need to be abstract
+django_settings.register(Text)
 
 class SEO(models.Model):
     path = models.CharField(max_length=255, verbose_name=u'URL')

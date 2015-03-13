@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'widget_tweaks',
     'redactor',
+    'django_settings',
     'app',
 )
 
