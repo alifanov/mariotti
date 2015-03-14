@@ -68,6 +68,10 @@ class NewsItem(models.Model):
     text = models.TextField(verbose_name=u'Text')
     slug = models.CharField(max_length=255, verbose_name=u'Slug')
 
+    meta_title = models.TextField(verbose_name=u'META Title', blank=True, null=True)
+    meta_keywords = models.TextField(verbose_name=u'META Keywords', blank=True, null=True)
+    meta_description = models.TextField(verbose_name=u'META Description', blank=True, null=True)
+
     def __unicode__(self):
         return self.title
 

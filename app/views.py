@@ -83,6 +83,12 @@ class NewsDetail(GeneralMixin, DetailView):
             (u'Новости', reverse('news')),
             (self.get_object().title, reverse('news-item', kwargs={'slug': self.get_object().slug})),
         )
+        if self.get_object().meta_title:
+            ctx['meta_title'] = self.get_object().meta_title
+        if self.get_object().meta_keywords:
+            ctx['meta_keywords'] = self.get_object().meta_keywords
+        if self.get_object().meta_description:
+            ctx['meta_description'] = self.get_object().meta_description
         return ctx
 
 class PortfolioList(GeneralMixin, ListView):
